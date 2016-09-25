@@ -7,6 +7,9 @@ def get_random_word():
     random_word = words[random.randint(0, len(words)-1)]# do the words-1 because of the zero place Index
     return random_word
 
+def show_word(word):
+    print(word)
+
 def play_word_games():
     strikes = 0
     max_strikes = 3 #this is creating variables
@@ -15,7 +18,12 @@ def play_word_games():
 
     word  = get_random_word() #defining new function needs paranthesis, then I went up and defined this get_random_word
 
+    blanked_word = "_" * len(word)
+
     while playing:  #this means it will continue running while this is true. Might also say while strikes < 3
+        show_word(blanked_word)
+        #letter = get_guess()
+    
         strikes += 1 #taking strikes and and setting it equal to strikes + 1
 
         if strikes >= max_strikes:
