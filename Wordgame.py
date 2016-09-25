@@ -1,5 +1,11 @@
+import random #imports are an external library that we will reference in our code
+
 def get_random_word():
-    return "pizza"
+    words = ["pizza", "cheese", "apples"]  #lists! begins with a zero based index. Pizza is word 0
+    #len(words) will tell us 3. That's the length of the list. words.append("noodles")
+    #words.reverse() would print this in reverse order. 
+    random_word = words[random.randint(0, len(words)-1)]# do the words-1 because of the zero place Index
+    return random_word
 
 def play_word_games():
     strikes = 0
@@ -19,6 +25,8 @@ def play_word_games():
         print("Sorry. Game Over.")
     else:
         print("Winner!") #ran and tested the code here. Good habit to keep testing
+
+        #now we import random and begin lists
 
 
 
